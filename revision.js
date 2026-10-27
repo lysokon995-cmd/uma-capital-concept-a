@@ -146,7 +146,7 @@
   function renderPhoto() {
     const b = thumbs[photo], im = $('img', gallery);
     im.src = b.dataset.gallery;
-    im.alt = lang === 'en' ? 'Property photo ' + (photo + 1) : b.dataset.galleryLabel;
+    im.alt = lang === 'en' ? b.dataset.galleryLabelEn || 'Property photo ' + (photo + 1) : b.dataset.galleryLabel;
     $('.gallery-count', gallery).textContent = `${photo + 1} / ${thumbs.length}`;
   }
   thumbs.forEach((b, i) => b.addEventListener('click', () => {
