@@ -123,12 +123,12 @@
     if (enquiry) enquiry.href = 'mailto:arenda@umacapital.ru?subject=' + encodeURIComponent('Аренда — ' + p.name);
     $('.property-tag', panel).textContent = en ? p.etag : p.tag;
     $('h3', panel).textContent = en ? p.en : p.name;
-    $('.feature-description', panel).textContent = en ? p.euse : p.use;
+    $('.feature-description', panel).textContent = en ? (p.featureDescriptionEn || p.euse) : (p.featureDescription || p.use);
     $('.feature-stat strong', panel).textContent = p.area;
     panel.setAttribute('aria-labelledby', 'tab-' + active);
     $$('[data-tab]').forEach(b => { const on = +b.dataset.tab === active; b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; });
   }
-  if ($('#property-panel')) fetch(url('properties.json?v=20261027-polish')).then(r => { if (!r.ok) throw new Error(); return r.json(); }).then(data => { properties = data; renderProperty(); }).catch(() => {});
+  if ($('#property-panel')) fetch(url('properties.json?v=20261102-revisions')).then(r => { if (!r.ok) throw new Error(); return r.json(); }).then(data => { properties = data; renderProperty(); }).catch(() => {});
   $$('[data-tab]').forEach(b => {
     b.addEventListener('click', () => { active = +b.dataset.tab; renderProperty(); });
     b.addEventListener('keydown', e => {
