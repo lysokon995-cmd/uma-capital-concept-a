@@ -343,3 +343,9 @@ html{scroll-padding-top:110px;scrollbar-color:var(--ink) var(--paper)}
   padding-inline:var(--gutter);
  }
 }
+
+.revision .operation-grid .operation-address{font-weight:600;line-height:1.8;min-height:3.6em;margin:18px 0 20px}
+.revision .operation-grid>article>div:last-child{display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.revision .operation-grid>article{display:flex;flex-direction:column}
+.revision .operation-grid>article>div:last-child>.text-link{margin-top:auto}
+@media(max-width:767px){.revision .operation-grid .operation-address{min-height:0}}
