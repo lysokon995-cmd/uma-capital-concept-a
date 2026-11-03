@@ -365,3 +365,7 @@ html{scroll-padding-top:110px;scrollbar-color:var(--ink) var(--paper)}
 .revision .akado-scope .split-heading{margin-bottom:40px}
 .revision .akado-service-rows .service-row{padding-block:32px}
 @media(max-width:767px){.revision .akado-intro{padding-bottom:38px}.revision .akado-location{padding-block:32px}.revision .akado-location h2{font-size:calc(clamp(23px,6vw,30px) - 3px)}.revision .akado-service-rows .service-row{padding-block:26px}}
+
+/* Property actions on navy panels: light by default, beige on hover. */
+.revision .feature-info .feature-link{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.revision .feature-info .feature-link:hover,.revision .feature-info .feature-link:focus-visible{background:var(--accent);color:var(--ink);border-color:var(--accent)}
