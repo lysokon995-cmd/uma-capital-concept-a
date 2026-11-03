@@ -353,3 +353,6 @@ html{scroll-padding-top:110px;scrollbar-color:var(--ink) var(--paper)}
 .revision .office-panel h2{font-size:clamp(25px,2.3vw,36px);line-height:1.35;text-wrap:initial}
 @media(max-width:767px){.revision .office-panel h2{font-size:clamp(21px,5.3vw,29px)}}
 @media(min-width:768px) and (max-width:1100px){.revision .contact-page-grid{grid-template-columns:1fr;gap:48px}}
+
+.revision.page-properties-voznesensky .route-section h2,.revision.page-properties-voznesensky .map-current{font-size:clamp(22px,2.15vw,34px);line-height:1.4;text-wrap:initial}
+@media(max-width:767px){.revision.page-properties-voznesensky .route-section h2,.revision.page-properties-voznesensky .map-current{font-size:clamp(18px,4.7vw,26px)}}

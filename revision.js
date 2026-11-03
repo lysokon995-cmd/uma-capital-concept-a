@@ -128,7 +128,7 @@
     panel.setAttribute('aria-labelledby', 'tab-' + active);
     $$('[data-tab]').forEach(b => { const on = +b.dataset.tab === active; b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1; });
   }
-  if ($('#property-panel')) fetch(url('properties.json?v=20261103-russian-names')).then(r => { if (!r.ok) throw new Error(); return r.json(); }).then(data => { properties = data; renderProperty(); }).catch(() => {});
+  if ($('#property-panel')) fetch(url('properties.json?v=20261103-address-lines')).then(r => { if (!r.ok) throw new Error(); return r.json(); }).then(data => { properties = data; renderProperty(); }).catch(() => {});
   $$('[data-tab]').forEach(b => {
     b.addEventListener('click', () => { active = +b.dataset.tab; renderProperty(); });
     b.addEventListener('keydown', e => {
@@ -216,7 +216,7 @@
       unload() { canvas.innerHTML = initial; bindMap(); },
       updateLanguage() {
         const label = $('.map-current', block), iframe = $('iframe', block);
-        if (label) { label.dataset.ru = address; label.dataset.en = enAddress; label.textContent = lang === 'en' ? enAddress : address; }
+        if (label) { label.dataset.ru = address === "Большой Гнездниковский пер., 1, стр. 2" ? "Большой Гнездниковский<br>переулок, 1, строение&nbsp;2" : address; label.dataset.en = enAddress; label.innerHTML = label.dataset[lang]; }
         if (iframe) iframe.title = (lang === 'en' ? 'Yandex Maps — ' + enAddress : 'Яндекс.Карта — ' + address);
       }
     };
