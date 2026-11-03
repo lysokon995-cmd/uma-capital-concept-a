@@ -57,7 +57,7 @@
   }
   reduced.addEventListener('change', () => { if (reduced.matches) $$('.reveal').forEach(e => e.classList.add('visible')); });
 
-  const titles = { 'Главная': 'Home', 'О компании': 'About', 'Объекты': 'Properties', 'Эксплуатация': 'Operations', 'Команда': 'Team', 'Контакты': 'Contacts', 'Документы': 'Documents', 'Политика конфиденциальности': 'Privacy policy', 'Политика cookie': 'Cookie policy', 'Вознесенский': 'Voznesensky', 'Литис': 'Litis' };
+  const titles = { 'Главная': 'Home', 'О компании': 'About', 'Объекты': 'Properties', 'Эксплуатация': 'Operations', 'Команда': 'Team', 'Контакты': 'Contacts', 'Документы': 'Documents', 'Политика конфиденциальности': 'Privacy policy', 'Политика cookie': 'Cookie policy', 'БЦ «Централ Сити Тауэр»': 'Central City Tower', 'Вознесенский': 'Voznesensky', 'Литис': 'Litis', 'Акадо': 'Akado' };
   const originalTitle = document.title;
   let properties = [], active = 0;
   function translate() {
@@ -65,10 +65,14 @@
     const title = originalTitle.replace(/ — UMA Capital$/, '');
     document.title = (lang === 'en' ? titles[title] || title : title) + ' — UMA Capital';
     $$('[data-ru][data-en]').forEach(e => { e.innerHTML = e.dataset[lang]; });
+    const description = $('meta[name="description"]');
+    if (description) description.content = description.dataset[lang === 'en' ? 'descriptionEn' : 'descriptionRu'];
+    $$('img[data-alt-ru][data-alt-en]').forEach(e => { e.alt = e.dataset[lang === 'en' ? 'altEn' : 'altRu']; });
+    if (gallery.open) renderPhoto();
     $('.language').textContent = lang === 'ru' ? 'EN' : 'RU';
     $('.language').setAttribute('aria-label', lang === 'ru' ? 'Switch to English' : 'Переключить на русский');
     const labels = {
-      '.desktop-nav': 'Main navigation', '#mobile-menu': 'Mobile navigation', '.breadcrumbs': 'Breadcrumbs',
+      '.desktop-nav': 'Main navigation', '#mobile-menu': 'Mobile navigation', '.breadcrumbs': 'Breadcrumbs', '.hero-video': 'Central City Tower, Moscow',
       '.skip': 'Skip to content', '.gallery-dialog': 'Property gallery', '.gallery-close': 'Close gallery',
       '[data-gallery-prev]': 'Previous photo', '[data-gallery-next]': 'Next photo',
       '.property-tabs': 'Business centres', '.cookie-banner': 'Cookie preferences',

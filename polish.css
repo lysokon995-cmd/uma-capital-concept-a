@@ -42,10 +42,10 @@ html{scroll-padding-top:110px;scrollbar-color:var(--ink) var(--paper)}
 
 /* Primary actions have the same shape and behaviour throughout the site. */
 .revision .cta,.revision .plain-button.filled{display:inline-flex;justify-content:space-between;align-items:center;gap:24px;min-height:var(--button-height);padding:13px 23px;background:var(--ink);border:1px solid var(--ink);color:var(--paper);font-size:14px;line-height:1.5;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s;cursor:pointer}
-.revision .cta:hover,.revision .plain-button.filled:hover{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.revision .cta:hover,.revision .plain-button.filled:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
 .revision .cta:focus-visible,.revision .plain-button:focus-visible,.revision a:focus-visible,.revision button:focus-visible,.revision input:focus-visible{outline:2px solid currentColor;outline-offset:5px}
 .revision .site-header>.header-actions>.cta{background:var(--ink);border-color:var(--ink);color:var(--paper);padding:12px 22px;min-height:48px;font-size:13px}
-.revision .site-header>.header-actions>.cta:hover{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.revision .site-header>.header-actions>.cta:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
 .revision .contact-strip{align-items:center;gap:40px}
 .revision .contact-strip h2{font-size:clamp(30px,3.2vw,46px);max-width:780px}
 .revision .contact-strip .cta{background:var(--paper);border-color:var(--paper);color:var(--ink)}
@@ -59,7 +59,7 @@ html{scroll-padding-top:110px;scrollbar-color:var(--ink) var(--paper)}
 .revision .plain-button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:11px 20px;font-size:13px;line-height:1.5;cursor:pointer;border:1px solid var(--ink);background:transparent;color:var(--ink)}
 .revision .plain-button:hover{background:var(--ink);color:var(--paper)}
 .revision .section-end .text-link,.revision .direction-grid .text-link,.revision .map-external,.revision .address-list .text-link,.revision .operation-grid .text-link,.revision .team-note .text-link,.revision .feature-info .feature-link{display:inline-flex;justify-content:space-between;align-items:center;gap:28px;padding:13px 21px;min-height:48px;min-width:200px;width:fit-content;max-width:100%;background:var(--ink);color:var(--paper);border:1px solid var(--ink);font-size:13px;line-height:1.6;text-decoration:none}
-.revision .section-end .text-link:hover,.revision .direction-grid .text-link:hover,.revision .map-external:hover,.revision .address-list .text-link:hover,.revision .operation-grid .text-link:hover,.revision .team-note .text-link:hover{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.revision .section-end .text-link:hover,.revision .direction-grid .text-link:hover,.revision .map-external:hover,.revision .address-list .text-link:hover,.revision .operation-grid .text-link:hover,.revision .team-note .text-link:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
 .revision .home-operation .section-end .text-link:hover,.revision .operation-grid .text-link:hover{background:var(--paper);border-color:var(--ink);color:var(--ink)}
 .revision .feature-info .feature-link{background:var(--accent);border-color:var(--accent);margin-top:auto;color:var(--paper)}
 .revision .text-link:after{display:none}
@@ -93,7 +93,7 @@ html{scroll-padding-top:110px;scrollbar-color:var(--ink) var(--paper)}
 .revision .related-property h3{font-size:24px;margin:0 0 20px}
 .revision .related-property>div>span{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:44px;padding:10px 16px;background:var(--ink);color:var(--paper);font-size:13px}
 .revision .related-property:hover>img{transform:scale(1.025)}
-.revision .related-property:hover>div>span{background:var(--accent)}
+.revision .related-property:hover>div>span{background:var(--accent);color:var(--ink)}
 .revision .object-card h3{font-size:28px}
 .revision .object-card p{font-size:14px}
 .revision .catalog-contact{display:flex;gap:15px;justify-content:space-between;align-items:center;margin-top:16px}
@@ -244,14 +244,15 @@ html{scroll-padding-top:110px;scrollbar-color:var(--ink) var(--paper)}
  .revision .cta,.revision .plain-button.filled{font-size:13px}
  .revision .presentation-link{min-width:0;width:100%;gap:12px;max-width:350px}
  .revision .property-tabs,.revision .map-tabs{gap:8px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-right:0;padding-right:0}
- .revision .property-tabs button,.revision .map-tabs button{white-space:normal;padding:10px 9px;font-size:11px;line-height:1.5;min-height:54px;min-width:0}
+ .revision .property-tabs button,.revision .map-tabs button{white-space:normal;padding:10px 9px;font-size:13px;line-height:1.5;min-height:54px;min-width:0}
+ .revision .property-tag{font-size:12px;line-height:1.7}
  .revision .other-links{grid-template-columns:1fr;gap:24px}
  .revision .related-property>img{height:210px}
  .revision .related-property h3{font-size:23px}
  .revision .people{gap:0 16px}
  .revision .person-caption{padding-top:16px}
  .revision .people .person h3{font-size:14px;line-height:1.45}
- .revision .people .person p{font-size:11px;line-height:1.6}
+ .revision .people .person p{font-size:14px;line-height:1.6}
  .revision .person-scope{font-size:11px;line-height:1.6;padding-top:13px}
  .revision .team-note h2{font-size:28px}
  .revision .route-section h2{font-size:29px}
@@ -381,3 +382,13 @@ html{scroll-padding-top:110px;scrollbar-color:var(--ink) var(--paper)}
 /* Keep breathing room after job titles even when shared subgrid rows are used. */
 .revision .people-full .person-caption{padding-bottom:48px}
 @media(max-width:767px){.revision .people-full .person-caption{padding-bottom:32px}}
+
+/* Keep full property names readable on narrow screens without splitting words. */
+@media(max-width:600px){
+ .revision .property-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .revision .property-tabs button:first-child{grid-column:1/-1}
+}
+@media(max-width:767px){
+ .revision .people-home .person-caption{padding-bottom:32px}
+ .revision .team-heading h2 br{display:initial}
+}
