@@ -122,7 +122,7 @@
     const enquiry = $('.feature-enquiry', panel);
     if (enquiry) enquiry.href = 'mailto:arenda@umacapital.ru?subject=' + encodeURIComponent('Аренда — ' + p.name);
     $('.property-tag', panel).textContent = en ? p.etag : p.tag;
-    $('h3', panel).textContent = en ? p.en : p.name;
+    $('h3', panel).textContent = en ? p.en : (p.slug === 'central-city-tower' ? 'БЦ «Централ Сити Тауэр»' : p.name);
     $('.feature-description', panel).textContent = en ? (p.featureDescriptionEn || p.euse) : (p.featureDescription || p.use);
     $('.feature-stat strong', panel).textContent = p.area;
     panel.setAttribute('aria-labelledby', 'tab-' + active);
