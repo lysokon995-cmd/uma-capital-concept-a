@@ -396,9 +396,9 @@ html{scroll-padding-top:110px;scrollbar-color:var(--ink) var(--paper)}
 /* Narrow desktop hero copy; preserve the approved mobile layout. */
 @media(min-width:768px){
  .revision .hero-two .hero-copy{width:48%;padding-top:90px;padding-bottom:60px}
- .revision .hero-two h1{font-size:clamp(36px,3.8vw,60px);line-height:1.12;letter-spacing:-.04em}
+ .revision .hero-two h1{font-size:calc(clamp(42px,4.8vw,76px) - 2px);line-height:1.12;letter-spacing:-.04em}
  .revision .hero-two h1 .desktop-break{display:initial}
 }
-@media(max-width:1100px) and (min-width:768px){.revision .hero-two .hero-copy{width:52%;padding-top:85px}.revision .hero-two h1{font-size:clamp(32px,3.8vw,42px)}}
+@media(max-width:1100px) and (min-width:768px){.revision .hero-two .hero-copy{width:52%;padding-top:85px}}
 @media(max-width:767px){.revision .hero-two h1 .desktop-break{display:none}.revision .hero-two h1 .mobile-break{display:initial}}
 @media(min-width:768px){.revision .hero-two h1 .mobile-break{display:none}}
